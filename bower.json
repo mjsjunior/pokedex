@@ -1,0 +1,25 @@
+{
+  "name": "pokedex",
+  "authors": [
+    "Maurício Júnior <mauriciojs.junior@gmail.com>"
+  ],
+  "description": "Lista de pokemons",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "pokedex",
+    "pokemon"
+  ],
+  "license": "MIT",
+  "homepage": "http://mjsjunior.github.io/pokedex",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Materialize": "materialize#~0.97.3"
+  }
+}

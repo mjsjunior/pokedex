@@ -1,0 +1,75 @@
+<h2>#{{ pokemon.name }}</h2>
+
+
+<div id="bio" class="row">
+<div ng-swipe-left="nextPokemon()" ng-swipe-right="prevPokemon()">
+				<div class="col s12">
+					<div class="description">
+					<img src="{{pokemon.image}}" alt="">
+					The seed on its back is filled with nutrients. The seed grows steadily larger as its body grows.
+					</div>
+				</div>
+
+			
+				<div class="col s3">
+					<div class="info">
+						<div class="title">Altura</div>
+						<div class="value">{{pokemon.height / 10}}m</div>
+					</div>
+				</div>
+				<div class="col s3">
+					<div class="info">
+						<div class="title">Peso</div>
+						<div class="value">{{pokemon.weight / 10}} Kg</div>
+					</div>
+				</div>
+				<div class="col s3">
+					<div class="info">
+						<div class="title">Ataque</div>
+						<div class="value">{{pokemon.attack}}</div>
+					</div>
+				</div>
+				<div class="col s3">
+					<div class="info">
+						<div class="title">Defesa</div>
+						<div class="value">{{pokemon.defense}}</div>
+					</div>
+				</div>
+			<div class="divider"></div>
+				<div class="col s6">
+				<div class="tipo">
+				<h2>Tipo</h2>
+					<div class="box-tags">
+						<div ng-repeat="(key, value) in pokemon.types" class="tag tipo" data-url-type="{{value.uri_resource}}">{{value.name}}</div>
+					</div>
+				</div>
+				</div>
+				<div class="col s6">
+				<div class="fraquezas">
+					<h2>Fraquezas</h2>
+					<div class="box-tags">
+						<div ng-repeat="(key, value) in pokemon.weakness">
+							<div class="tag tipo">{{value.name}}</div>
+						</div>
+					</div>
+				</div>
+				</div>
+</div>
+
+			{{pokemon.hasEvolution}}
+	
+				<div class="col s12">
+					<div class="evolutions lighten-2 text-white">
+						<h2>Evoluções</h2>
+					</div>
+					<div ng-if="!pokemon.hasEvolution">
+						<h5>Este pokemon não evolui</h5>
+					</div>
+					<div ng-if="pokemon.hasEvolution" class="box-evo">
+						<div ng-repeat="(key, value) in pokemon.evolutions" class="evo">
+							<img style="max-width:100%" src="{{pokemon.imageEvo}}" alt="">
+							<h5>{{value.to}}</h5>
+						</div>
+					</div>
+				</div>
+		</div>

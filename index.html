@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="pokeApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Pokedex App</title>
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="static/css/style.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	
+	<script src="static/jquery/dist/jquery.min.js"></script>
+	<script src="static/Materialize/dist/js/materialize.min.js"></script>
+	<script src="static/angular/angular.min.js"></script>
+	<script src="static/angular-route/angular-route.min.js"></script>
+	<script src="static/angular-touch/angular-touch.min.js"></script>
+	<script src="static/js/main.js"></script>
+
+	<script src="static/js/core.js"></script>
+	<base href="/" />
+</head>
+<body>
+	<nav>
+		<div class="nav-wrapper">
+		  <a href="#!" class="brand-logo">Pokedex App</a>
+		  <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+		  <ul class="right hide-on-med-and-down">
+		    <li><a href="sass.html">Sass</a></li>
+		    <li><a href="badges.html">Components</a></li>
+		    <li><a href="collapsible.html">Javascript</a></li>
+		    <li><a href="mobile.html">Mobile</a></li>
+		  </ul>
+		  <ul class="side-nav" id="mobile-demo">
+		    <li><a href="sass.html">Sass</a></li>
+		    <li><a href="badges.html">Components</a></li>
+		    <li><a href="collapsible.html">Javascript</a></li>
+		    <li><a href="mobile.html">Mobile</a></li>
+		  </ul>
+		</div>
+	</nav>
+
+	<main>
+	<div class="container">
+		 <div class="row">
+		    <!-- <div class="col s12">
+		      <ul class="tabs">
+		        <li class="tab col s3"><a class="active" href="#bio">Bio</a></li>
+		        <li class="tab col s3"><a href="#test2">Moves</a></li>
+		        <li class="tab col s3"><a href="#test3">Locations</a></li>
+		        <li class="tab col s3"><a href="#test4">Stats</a></li>
+		      </ul>
+		    </div> -->
+		    <a href="/#pokemon/1">Pokemon 1</a>
+		    <div ng-view></div>
+		    <!-- <div id="test2" class="row">Test 2</div>
+		    <div id="test3" class="row">Test 3</div>
+		    <div id="test4" class="row">Test 4</div> -->
+		  </div>
+		</div>
+	</main>
+
+
+	
+</body>
+</html>
