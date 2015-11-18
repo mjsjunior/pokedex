@@ -5,16 +5,16 @@ var pokeApiRaiz = "http://pokeapi.co"
 
 pokeApp.config(['$routeProvider','$locationProvider',function($routeProvider,$locationProvider){
     $routeProvider
-        .when('/',{
+        .when('/pokedex',{
             templateUrl: '_home.html',
             controller: 'mainController'
         })
-        .when('/pokemon/:id',{
+        .when('/pokedex/pokemon/:id',{
             templateUrl: '/_pokemon.html',
             controller: 'pokemonController'
         })
         .otherwise({
-            redirectTo:'/'
+            redirectTo:'/pokedex'
         });
         $locationProvider.html5Mode(true);
 }]);
