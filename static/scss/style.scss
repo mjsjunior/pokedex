@@ -1,5 +1,5 @@
 @import '../Materialize/sass/materialize';
-$cor: #F64031;
+$cor: #EE6E73;
 *{
 	box-sizing: border-box;
 }
@@ -8,7 +8,7 @@ $cor: #F64031;
 }
 
 body{
-	overflow-x:hidden;
+	
 }
 
 main{
@@ -113,4 +113,40 @@ main{
 		@extend .titulo-section;
 		text-align:left;
 	}
+}
+
+
+#loading-bar-spinner .spinner-icon {
+  width: 84px;
+  height: 84px;
+  border:  solid 2px transparent;
+  border-top-color:  #EE6E73;
+  border-left-color: #EE6E73;
+  border-radius: 50%;
+  top:50%;
+  width: 50%;
+
+}
+
+
+#loading-bar .bar {
+	  background: #000;
+	  height: 5px;
+}
+
+#loading-bar-spinner{    
+	display: block;
+    position: fixed;
+    z-index: 10002;
+    top: 60px;
+    left: 0;
+    background: rgba(255,255,255,0.9);
+    height: 100vh;
+    width: 100%;}
+
+#loading-bar-spinner img{
+	position: absolute;
+    top: 12%;
+    left: 40%;
+    width: 300px;
 }

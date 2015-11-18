@@ -1,20 +1,20 @@
 // create the module and name it scotchApp
-var pokeApp = angular.module('pokeApp', ['ngRoute','ngTouch']);
+var pokeApp = angular.module('pokeApp', ['ngRoute','angular-loading-bar','ngTouch']);
 var pokeApi = "http://pokeapi.co/api/v1/"
 var pokeApiRaiz = "http://pokeapi.co"
 
 pokeApp.config(['$routeProvider','$locationProvider',function($routeProvider,$locationProvider){
     $routeProvider
-        .when('/pokedex',{
-            templateUrl: '_home.html',
+        .when('/',{
+            templateUrl: '/_home.html',
             controller: 'mainController'
         })
-        .when('/pokedex/pokemon/:id',{
+        .when('/pokemon/:id',{
             templateUrl: '/_pokemon.html',
             controller: 'pokemonController'
         })
         .otherwise({
-            redirectTo:'/pokedex'
+            redirectTo:'/'
         });
         $locationProvider.html5Mode(true);
 }]);

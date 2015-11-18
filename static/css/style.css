@@ -8575,9 +8575,6 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 .container {
   max-width: 600px; }
 
-body {
-  overflow-x: hidden; }
-
 main {
   margin-top: 35px; }
 
@@ -8596,7 +8593,7 @@ main {
   text-align: center;
   font-weight: 800; }
   .info .title {
-    color: #F64031; }
+    color: #EE6E73; }
 
 .titulo-section, .tipo h2, .fraquezas h2, .evolutions h2 {
   font-size: 22px;
@@ -8608,7 +8605,7 @@ main {
   flex-flow: row wrap; }
 
 .tag {
-  background: #F64031;
+  background: #EE6E73;
   color: #fff;
   flex-grow: 1;
   margin-left: 10px;
@@ -8637,7 +8634,7 @@ main {
   width: 100%; }
 
 .evolutions {
-  background: #F64031;
+  background: #EE6E73;
   color: #fff;
   margin-left: -15px;
   margin-right: -15px;
@@ -8647,5 +8644,35 @@ main {
   .evolutions h2 {
     margin: 0;
     text-align: left; }
+
+#loading-bar-spinner .spinner-icon {
+  width: 84px;
+  height: 84px;
+  border: solid 2px transparent;
+  border-top-color: #EE6E73;
+  border-left-color: #EE6E73;
+  border-radius: 50%;
+  top: 50%;
+  width: 50%; }
+
+#loading-bar .bar {
+  background: #000;
+  height: 5px; }
+
+#loading-bar-spinner {
+  display: block;
+  position: fixed;
+  z-index: 10002;
+  top: 60px;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9);
+  height: 100vh;
+  width: 100%; }
+
+#loading-bar-spinner img {
+  position: absolute;
+  top: 12%;
+  left: 40%;
+  width: 300px; }
 
 /*# sourceMappingURL=style.css.map */
