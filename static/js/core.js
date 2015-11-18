@@ -5,7 +5,7 @@ var pokeApiRaiz = "http://pokeapi.co"
 
 pokeApp.config(['$routeProvider','$locationProvider',function($routeProvider,$locationProvider){
     $routeProvider
-        .when('/#',{
+        .when('/',{
             templateUrl: '_home.html',
             controller: 'mainController'
         })
@@ -22,7 +22,6 @@ pokeApp.config(['$routeProvider','$locationProvider',function($routeProvider,$lo
 //Controller da página inicial de login
 pokeApp.controller('mainController', ['$scope','$http', function($scope,$http) {
     console.log('main controller');
-
 }]);
 
 //Controller da página de Cadastro
@@ -74,7 +73,6 @@ pokeApp.controller('pokemonController', ['$scope','$window','$routeParams','$htt
             evo = parseInt($routeParams.id)+1;
             console.log(evo);
             str = evo+"";
-console.log(str);
            if(str.length == 1)
             evo = '00'+str;
 
